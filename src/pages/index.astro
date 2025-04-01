@@ -5,9 +5,18 @@ import Layout from '@/layouts/Layout.astro';
 
 <Layout>
   <Header />
+  <main class="responsive">
+    <div class="grid">
+      <div class="s6">
+        <h3>Pane 1</h3>
+      </div>
+      <div class="s6">
+        <h3>Pane 2</h3>
+      </div>
+    </div>
+  </main>
 </Layout>
 
 <script>
   import 'beercss';
-  import 'material-dynamic-colors';
 </script>
