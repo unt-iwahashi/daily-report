@@ -1,17 +1,19 @@
 ---
-import Header from '@/components/Header.astro';
 import Layout from '@/layouts/Layout.astro';
+import Header from '@/components/Header.astro';
+import { InputArea } from '@/blocks/InputArea';
+import { ViewArea } from '@/blocks/ViewArea';
 ---
 
 <Layout>
   <Header />
   <main class="responsive">
     <div class="grid">
-      <div class="s6">
-        <h3>Pane 1</h3>
+      <div class="s6 padding">
+        <InputArea />
       </div>
-      <div class="s6">
-        <h3>Pane 2</h3>
+      <div class="s6 padding">
+        <ViewArea />
       </div>
     </div>
   </main>
