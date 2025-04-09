@@ -1,3 +1,10 @@
+import { ReportTitle } from '@/components/Title/ReportTitle';
+
 export const InputArea = () => {
-  return <div>InputArea</div>;
+  return (
+    <>
+      <ReportTitle title="InputArea" />
+      <div>InputArea</div>
+    </>
+  );
 };
