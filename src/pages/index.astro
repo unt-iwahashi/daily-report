@@ -1,6 +1,7 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import Header from '@/components/Header.astro';
+import { Today } from '@/components/Date/Today';
 import { InputArea } from '@/blocks/InputArea';
 import { ViewArea } from '@/blocks/ViewArea';
 ---
@@ -10,9 +11,11 @@ import { ViewArea } from '@/blocks/ViewArea';
   <main class="responsive">
     <div class="grid">
       <div class="s6 padding">
+        <Today />
         <InputArea />
       </div>
       <div class="s6 padding">
+        <Today />
         <ViewArea />
       </div>
     </div>
