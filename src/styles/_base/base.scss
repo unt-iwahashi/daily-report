@@ -1,0 +1,72 @@
+html,
+body {
+  height: 100%;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  /* padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); */
+  font-family: var(--typo-font-base);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+
+  /* @see https://ics.media/entry/240411/ */
+  word-break: normal; /* 単語の分割はデフォルトに依存 */
+  overflow-wrap: anywhere; /* 収まらない場合に折り返す */
+  line-break: strict; /* 禁則処理を厳格に適用 */
+
+  /* iOS Safari, Androidのフォントサイズ調整を無効化 */
+  text-size-adjust: 100%;
+
+  /* Safari, Firefox向けのアンチエイリアス処理を追加（animation関係） */
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img,
+button {
+  vertical-align: bottom;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+// ここから追加
+a {
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}

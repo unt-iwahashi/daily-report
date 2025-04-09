@@ -8,20 +8,16 @@ import { ViewArea } from '@/blocks/ViewArea';
 
 <Layout>
   <Header />
-  <main class="responsive">
-    <div class="grid">
-      <div class="s6 padding">
+  <main>
+    <div>
+      <div>
         <Today />
         <InputArea client:load />
       </div>
-      <div class="s6 padding">
+      <div>
         <Today />
         <ViewArea client:load />
       </div>
     </div>
   </main>
 </Layout>
-
-<script>
-  import 'beercss';
-</script>

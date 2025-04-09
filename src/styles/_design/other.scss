@@ -1,0 +1,17 @@
+@use '@/styles/_develop/_all.scss' as *;
+
+:root {
+  --outer-inner: #{rem(1440)};
+  --base-inner: #{rem(960)};
+  --inner-padding: #{rem(24)};
+
+  --transition-primary: 0.3s;
+
+  --opacity-primary: 0.7;
+}
+
+.inner {
+  max-width: calc(var(--base-inner) + var(--inner-padding) * 2);
+  padding-inline: var(--inner-padding);
+  margin-inline: auto;
+}

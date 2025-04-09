@@ -1,0 +1,9 @@
+@use '@/styles/_develop/_all' as *;
+
+.link-hover {
+  transition: opacity var(--transition-primary);
+
+  @include hover {
+    opacity: var(--opacity-primary);
+  }
+}
