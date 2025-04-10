@@ -1,3 +1,4 @@
+import style from './InputArea.module.scss';
 import { ReportTitle } from '@/components/Title/ReportTitle';
 import { ReportAtom } from '@/state/ReportData';
 import { useSetAtom, useAtomValue } from 'jotai';
@@ -57,56 +58,56 @@ export const InputArea = () => {
   return (
     <>
       <ReportTitle title="今日行ったこと" />
-      <div>
-        {todays_todo.map((todo, index) => (
-          <div key={index}>
-            <div>
-              案件名
-              <input
-                type="text"
-                placeholder="案件名"
-                value={todo.title}
-                onChange={(e) => handleTodoChange(e, index, 'title', 'todays_todo')}
-              />
-            </div>
-            <div>
-              作業内容
-              <input
-                type="text"
-                placeholder="作業内容"
-                value={todo.content}
-                onChange={(e) => handleTodoChange(e, index, 'content', 'todays_todo')}
-              />
-            </div>
+
+      {todays_todo.map((todo, index) => (
+        <div key={index} className={style.todoInput}>
+          <div className={style.todoInput_item}>
+            案件名
+            <input
+              type="text"
+              placeholder="案件名"
+              value={todo.title}
+              onChange={(e) => handleTodoChange(e, index, 'title', 'todays_todo')}
+            />
           </div>
-        ))}
-      </div>
+          <div className={style.todoInput_item}>
+            作業内容
+            <input
+              type="text"
+              placeholder="作業内容"
+              value={todo.content}
+              onChange={(e) => handleTodoChange(e, index, 'content', 'todays_todo')}
+            />
+          </div>
+        </div>
+      ))}
+
       <button onClick={() => addTodoInput('todays_todo')}>+</button>
       <ReportTitle title="明日やること" />
-      <div>
-        {tomorrow_todo.map((todo, index) => (
-          <div key={index}>
-            <div>
-              案件名
-              <input
-                type="text"
-                placeholder="案件名"
-                value={todo.title}
-                onChange={(e) => handleTodoChange(e, index, 'title', 'tomorrow_todo')}
-              />
-            </div>
-            <div>
-              作業内容
-              <input
-                type="text"
-                placeholder="作業内容"
-                value={todo.content}
-                onChange={(e) => handleTodoChange(e, index, 'content', 'tomorrow_todo')}
-              />
-            </div>
+
+      {tomorrow_todo.map((todo, index) => (
+        <div key={index} className={style.todoInput}>
+          <div className={style.todoInput_item}>
+            案件名
+            <input
+              type="text"
+              placeholder="案件名"
+              value={todo.title}
+              onChange={(e) => handleTodoChange(e, index, 'title', 'tomorrow_todo')}
+            />
           </div>
-        ))}
-      </div>
+          <div className={style.todoInput_item}>
+            作業内容
+            <input
+              type="text"
+              placeholder="作業内容"
+              value={todo.content}
+              onChange={(e) => handleTodoChange(e, index, 'content', 'tomorrow_todo')}
+            />
+          </div>
+        </div>
+      ))}
+
       <button onClick={() => addTodoInput('tomorrow_todo')}>+</button>
       <ReportTitle title="出退勤時間" />
       <input type="text" name="time" onChange={handleChange} />

@@ -7,6 +7,7 @@ type Props = {
 export const ReportTitle = ({ title }: Props) => {
   return (
     <>
+      <br />
       <h2 className={style.reportTitle}>■ {title}</h2>
     </>
   );

@@ -11,21 +11,23 @@ export const ViewArea = () => {
   return (
     <>
       <ReportTitle title="今日行ったこと" />
-      <ul>
+      <div>
         {todays_todo.map((todo, index) => (
-          <li key={index}>
-            ・{todo.title} {todo.content !== '' && `｜${todo.content}`}
-          </li>
+          <div key={index}>
+            {todo.title && `・${todo.title}`}
+            {todo.content !== '' && `｜${todo.content}`}
+          </div>
         ))}
-      </ul>
+      </div>
       <ReportTitle title="明日やること" />
-      <ul>
+      <div>
         {tomorrow_todo.map((todo, index) => (
-          <li key={index}>
-            ・{todo.title} {todo.content !== '' && `｜${todo.content}`}
-          </li>
+          <div key={index}>
+            {todo.title && `・${todo.title}`}
+            {todo.content !== '' && `｜${todo.content}`}
+          </div>
         ))}
-      </ul>
+      </div>
       <ReportTitle title="出退勤時間" />
       <div>{time}</div>
       <ReportTitle title="自宅作業（作業した場合のみ）" />

@@ -1,3 +1,9 @@
+@use '@/styles/_develop/_all.scss' as *;
+@use '@/styles/_design/_all.scss' as *;
+
 .reportTitle {
-  font-size: 16px;
+  font-size: rem(16);
+  &:not(:first-of-type) {
+    margin-top: rem(16);
+  }
 }

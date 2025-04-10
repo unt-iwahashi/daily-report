@@ -8,8 +8,8 @@ import { ViewArea } from '@/blocks/ViewArea';
 
 <Layout>
   <Header />
-  <main>
-    <div>
+  <main class="main">
+    <div class="inner">
       <div>
         <Today />
         <InputArea client:load />
@@ -21,3 +21,18 @@ import { ViewArea } from '@/blocks/ViewArea';
     </div>
   </main>
 </Layout>
+
+<style lang="scss">
+  @use '@/styles/_develop/_all.scss' as *;
+  @use '@/styles/_design/_all.scss' as *;
+
+  .main {
+    padding: rem(80) rem(48);
+  }
+  .inner {
+    display: flex;
+    gap: rem(48);
+    max-width: rem(1200);
+    margin: 0 auto;
+  }
+</style>

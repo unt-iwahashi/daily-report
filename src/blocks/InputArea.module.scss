@@ -1,0 +1,13 @@
+@use '@/styles/_develop/_all.scss' as *;
+@use '@/styles/_design/_all.scss' as *;
+
+.todoInput {
+  display: flex;
+  gap: rem(16);
+  margin-top: rem(16);
+}
+
+.todoInput_item {
+  display: flex;
+  gap: rem(8);
+}
