@@ -70,3 +70,9 @@ a {
 address {
   font-style: normal;
 }
+
+input {
+  &::placeholder {
+    color: var(--color-gray);
+  }
+}
