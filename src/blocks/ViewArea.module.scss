@@ -1,0 +1,12 @@
+@use '@/styles/_develop/_all.scss' as *;
+@use '@/styles/_design/_all.scss' as *;
+
+.copy {
+  margin-top: rem(20);
+  padding: rem(2) rem(24);
+  border: 2px solid var(--color-black);
+  @include hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
+}
