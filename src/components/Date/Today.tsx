@@ -2,7 +2,7 @@ import style from './Today.module.scss';
 
 export const Today = () => {
   const today = new Date().toLocaleDateString('ja-JP', {
-    month: 'numeric',
+    month: 'long',
     day: 'numeric',
     weekday: 'short',
   });
