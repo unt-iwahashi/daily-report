@@ -11,3 +11,20 @@
   display: flex;
   gap: rem(8);
 }
+
+.addButton {
+  margin-top: rem(16);
+  width: rem(32);
+  height: rem(32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray);
+  border-radius: rem(4);
+  @include hover {
+    background: var(--color-black);
+    color: var(--color-white);
+    border: 1px solid var(--color-black);
+  }
+}

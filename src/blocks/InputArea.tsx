@@ -82,7 +82,9 @@ export const InputArea = () => {
         </div>
       ))}
 
-      <button onClick={() => addTodoInput('todays_todo')}>+</button>
+      <button onClick={() => addTodoInput('todays_todo')} className={style.addButton}>
+        +
+      </button>
       <ReportTitle title="明日やること" />
 
       {tomorrow_todo.map((todo, index) => (
@@ -108,7 +110,9 @@ export const InputArea = () => {
         </div>
       ))}
 
-      <button onClick={() => addTodoInput('tomorrow_todo')}>+</button>
+      <button onClick={() => addTodoInput('tomorrow_todo')} className={style.addButton}>
+        +
+      </button>
       <ReportTitle title="出退勤時間" />
       <input type="text" name="time" onChange={handleChange} />
       <ReportTitle title="自宅作業（作業した場合のみ）" />
